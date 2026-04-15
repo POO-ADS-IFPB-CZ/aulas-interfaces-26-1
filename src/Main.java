@@ -1,21 +1,19 @@
-import model.AreaCalculavel;
-import model.Circulo;
-import model.Quadrado;
+import model.Aluno;
+import model.Autenticavel;
+import model.Coordenador;
+import model.Professor;
 
 void main() {
-
-    AreaCalculavel.teste2();
-
-    Quadrado quadrado = new Quadrado(2);
-    quadrado.teste();
-    Circulo circulo = new Circulo(2);
-    circulo.teste();
-
-    teste(new Circulo(3));
-    teste(new Quadrado(2));
-
+    entrar(new Aluno("123","João", "joao@gmail.com",
+            "123"));
+    entrar(new Coordenador("312","Maria", "maria@gmail.com",
+            "321"));
 }
 
-void teste(Serializable s){
-
+void entrar(Autenticavel autenticavel){
+    if(autenticavel.autenticar("123","123")){
+        System.out.println("Bem vindo");
+        return;
+    }
+    System.out.println("Falha");
 }

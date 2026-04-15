@@ -1,6 +1,8 @@
 package model;
 
-public class Quadrado implements AreaCalculavel{
+import java.util.Comparator;
+
+public class Quadrado implements AreaCalculavel, Comparable<Quadrado>{
 
     private double lado;
 
@@ -26,4 +28,17 @@ public class Quadrado implements AreaCalculavel{
         System.out.println("Aqui é diferente...");
     }
 
+    @Override
+    public int compareTo(Quadrado o) {
+        if(lado > o.lado) return 1;
+        if(lado < o.lado) return -1;
+        return 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Quadrado{" +
+                "lado=" + lado +
+                '}';
+    }
 }
