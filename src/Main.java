@@ -11,4 +11,11 @@ void main() {
     Circulo circulo = new Circulo(2);
     circulo.teste();
 
+    teste(new Circulo(3));
+    teste(new Quadrado(2));
+
+}
+
+void teste(Serializable s){
+
 }

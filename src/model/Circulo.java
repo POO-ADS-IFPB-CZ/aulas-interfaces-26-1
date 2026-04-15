@@ -2,7 +2,7 @@ package model;
 
 import java.io.Serializable;
 
-public class Circulo implements AreaCalculavel{
+public class Circulo implements AreaCalculavel, Serializable{
 
     private double raio;
 
